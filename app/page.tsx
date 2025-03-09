@@ -41,7 +41,7 @@ export default function Home() {
             </motion.span>
           </Link>
           <nav className="hidden md:flex space-x-6">
-            {["About", "Skills", "Experience", "Education", "Contact"].map((item) => (
+            {["About", "Projects", "Skills", "Experience", "Education", "Contact"].map((item) => (
               <Link
                 key={item}
                 href={`#${item.toLowerCase()}`}
@@ -207,48 +207,174 @@ export default function Home() {
             >
               <Card className="overflow-hidden border-none shadow-xl bg-gradient-to-br from-background/80 to-background/40 backdrop-blur-sm">
                 <CardHeader className="pb-2">
-                  <CardTitle>Extra-Curricular Activities</CardTitle>
-                  <CardDescription>Beyond my professional work</CardDescription>
+                  <CardTitle>About Me</CardTitle>
+                  <CardDescription>My background and interests</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <div className="flex items-start gap-4">
-                    <div className="mt-1 bg-primary/10 p-2 rounded-full">
-                      <Music className="h-5 w-5 text-primary" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium">Music Producer</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Multi-instrumentalist and music producer with expertise in recording and production using FL
-                        Studio. Previously worked commercially in music before transitioning to AI and data science.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="mt-1 bg-primary/10 p-2 rounded-full">
-                      <Music className="h-5 w-5 text-primary" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium">Music Club President</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Spearheaded as the President of the Official Music Club at Sikkim Manipal Institute of
-                        Technology, organizing multiple inter and intra-college music festivals.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="mt-1 bg-primary/10 p-2 rounded-full">
-                      <Music className="h-5 w-5 text-primary" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium">Original Music</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Passionate about creating original music and exploring innovative production techniques.
-                      </p>
-                    </div>
-                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    I'm an AI Engineer with a passion for building intelligent systems that solve real-world problems.
+                    My expertise lies in developing AI-powered applications using LLMs, LangChain, and other
+                    cutting-edge frameworks.
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    When I'm not coding, I enjoy creating music as a multi-instrumentalist and producer. I've previously
+                    worked commercially in music before transitioning to AI and data science.
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    I'm constantly exploring new technologies and approaches in the AI space, with a particular focus on
+                    generative AI and agentic workflows.
+                  </p>
                 </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects" className="py-20 md:py-32 bg-muted/30">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="max-w-3xl mx-auto text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Personal Projects</h2>
+            <div className="h-1 w-20 bg-primary mx-auto mb-8 rounded-full"></div>
+            <p className="text-lg text-muted-foreground">
+              A showcase of my recent work in AI engineering and application development.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Project 1 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -5 }}
+              className="group"
+            >
+              <Card className="overflow-hidden border-none shadow-xl bg-gradient-to-br from-background/80 to-background/40 backdrop-blur-sm h-full flex flex-col">
+                <div className="relative aspect-video overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-purple-500/20 group-hover:opacity-75 transition-opacity" />
+                  <img
+                    src="/placeholder.svg?height=400&width=600"
+                    alt="AI Agent Framework"
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-xl">AI Agent Framework</CardTitle>
+                  <CardDescription>Autonomous AI agents for complex tasks</CardDescription>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <p className="text-sm text-muted-foreground mb-4">
+                    A framework for building autonomous AI agents that can perform complex tasks through planning,
+                    reasoning, and tool use. Built with LangChain and AutoGen.
+                  </p>
+                </CardContent>
+                <div className="p-4 pt-0">
+                  <Button asChild variant="outline" size="sm" className="w-full">
+                    <Link
+                      href="https://github.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-1"
+                    >
+                      View Project <ExternalLink className="h-3 w-3 ml-1" />
+                    </Link>
+                  </Button>
+                </div>
+              </Card>
+            </motion.div>
+
+            {/* Project 2 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -5 }}
+              className="group"
+            >
+              <Card className="overflow-hidden border-none shadow-xl bg-gradient-to-br from-background/80 to-background/40 backdrop-blur-sm h-full flex flex-col">
+                <div className="relative aspect-video overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-purple-500/20 group-hover:opacity-75 transition-opacity" />
+                  <img
+                    src="/placeholder.svg?height=400&width=600"
+                    alt="RAG Knowledge Base"
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-xl">RAG Knowledge Base</CardTitle>
+                  <CardDescription>Enhanced document retrieval system</CardDescription>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <p className="text-sm text-muted-foreground mb-4">
+                    A Retrieval Augmented Generation system that enhances LLM responses with relevant information from a
+                    knowledge base. Implemented with Chroma vector database and LlamaIndex.
+                  </p>
+                </CardContent>
+                <div className="p-4 pt-0">
+                  <Button asChild variant="outline" size="sm" className="w-full">
+                    <Link
+                      href="https://github.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-1"
+                    >
+                      View Project <ExternalLink className="h-3 w-3 ml-1" />
+                    </Link>
+                  </Button>
+                </div>
+              </Card>
+            </motion.div>
+
+            {/* Project 3 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -5 }}
+              className="group"
+            >
+              <Card className="overflow-hidden border-none shadow-xl bg-gradient-to-br from-background/80 to-background/40 backdrop-blur-sm h-full flex flex-col">
+                <div className="relative aspect-video overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-purple-500/20 group-hover:opacity-75 transition-opacity" />
+                  <img
+                    src="/placeholder.svg?height=400&width=600"
+                    alt="Sales Analytics Dashboard"
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-xl">Sales Analytics Dashboard</CardTitle>
+                  <CardDescription>Interactive data visualization</CardDescription>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <p className="text-sm text-muted-foreground mb-4">
+                    An interactive dashboard for visualizing sales data and identifying trends. Built with Power BI and
+                    connected to a PostgreSQL database with automated data pipeline.
+                  </p>
+                </CardContent>
+                <div className="p-4 pt-0">
+                  <Button asChild variant="outline" size="sm" className="w-full">
+                    <Link
+                      href="https://github.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-1"
+                    >
+                      View Project <ExternalLink className="h-3 w-3 ml-1" />
+                    </Link>
+                  </Button>
+                </div>
               </Card>
             </motion.div>
           </div>
@@ -451,6 +577,77 @@ export default function Home() {
                   algorithms, and software development. Participated in various technical events and led the college
                   music club.
                 </p>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Extracurricular Section */}
+      <section id="extracurricular" className="py-20 md:py-32">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="max-w-3xl mx-auto text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Extracurricular Activities</h2>
+            <div className="h-1 w-20 bg-primary mx-auto mb-8 rounded-full"></div>
+            <p className="text-lg text-muted-foreground">Beyond my professional work</p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="max-w-3xl mx-auto"
+          >
+            <Card className="overflow-hidden border-none shadow-xl bg-gradient-to-br from-background/80 to-background/40 backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle>Music & Creative Pursuits</CardTitle>
+                <CardDescription>My passion for music and creativity</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="mt-1 bg-primary/10 p-2 rounded-full">
+                    <Music className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-medium">Music Producer</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Multi-instrumentalist and music producer with expertise in recording and production using FL
+                      Studio. Previously worked commercially in music before transitioning to AI and data science.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="mt-1 bg-primary/10 p-2 rounded-full">
+                    <Music className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-medium">Music Club President</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Spearheaded as the President of the Official Music Club at Sikkim Manipal Institute of Technology,
+                      organizing multiple inter and intra-college music festivals.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="mt-1 bg-primary/10 p-2 rounded-full">
+                    <Music className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-medium">Original Music</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Passionate about creating original music and exploring innovative production techniques.
+                    </p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </motion.div>
